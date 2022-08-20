@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172770628-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172770628-6');
+</script>
+<meta charset="UTF-8">
+<title>フィルター回避サイト</title>
+<link rel="stylesheet" href="../css/sanitize.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="favicon.ico">
+<meta name="theme-color" content="#0012ff">
+</head>
+<body>
+  <h2 class="title">ホーム</h2>
+  <div class="body2">
+    <h4>ここでブックマークができます。新機能で一つしか追加できませんが、ご自身で最も使うサイトをブックマークしてみましょう。ページを読み込み直しても大丈夫なはずです。</h4>
+    <p>
+    サイト名
+    <input name="mydata_in" id="mydata_in" type="text" value="" />
+    &nbsp;URL
+    <input name="mydata_in" id="mydata2_in" type="text" value="" />
+    &nbsp;<input type="button" value="保存" onclick="save();" class="button" />
+    </p>
+    <a href="" id="favorite" target="_blank"></a>
+    <script language="javascript" type="text/javascript">
+      // 保存
+      function save() {
+        var mydata = localStorage.getItem('mydata');
+        var mylist = mydata;
+        mydata = document.getElementById("mydata_in").value;
+        var mydata2 = document.getElementById("mydata2_in").value;
+        console.log(`mydata_in = ${mydata_in}`);
+        mylist = ''+ mydata +','+ mydata2 +''
+        console.log(mylist);
+        localStorage.setItem('mydata', mylist);
+        let link = document.getElementById('favorite');
+        link.setAttribute('href', mydata2);
+        link.textContent = mydata;
+      }
+        mydata = localStorage.getItem('mydata');
+        var name = mydata.substr(0, mydata.indexOf(','));
+        var link = mydata.substr(mydata.indexOf(',') + 1);
+        let here = document.getElementById('favorite');
+        here.setAttribute('href', link);
+        here.textContent = name;
+    </script>
+    <p><br><br>ヒント・右下のカイル君をクリックするとお問い合わせができるよ<br>ホーム画面に載せるもの募集中。カイル君から応募してね。</p>
+  </div>
+  <ul>
+
+    
+<!--
+  <div class="tab">
+    <a href=../sub_site/ファイル.html target="_blank" class="document">
+    <img src="../img/ファイル.jpeg" class="img">
+    <h3>サイト名</h3>
+    <p>説明</p>
+    </a>
+  </div>
+-->
+  </ul>
+</body>
+</html>

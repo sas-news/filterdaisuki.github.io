@@ -1,0 +1,141 @@
+@charset "UTF-8" ;
+
+html {
+    font-family: serif;
+}
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.sub {
+    margin-top: 100px;
+}
+header {
+    margin-right: auto;
+    background-color: #adadad;
+}
+.main-img {
+    margin: 20px ;
+    width: 300px;
+}
+.fi{
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+h1 {
+    padding: 10px;
+    margin: 0;
+    background-color: #303030;
+}
+.kif {
+    margin: 0;
+    background-color: rgb(190, 0, 0);
+}
+span{
+    color: red;
+    font-size: 20px;
+}
+h2 {
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px double white;
+    display: inline-block;
+}
+h5{
+    color: rgb(60, 60, 60);
+}
+.news{
+    font-size: 25px;
+    border-bottom: 5px dotted white;
+}
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a:hover {
+    color: rgb(192, 192, 192);
+}
+a:active {
+    color: grey;
+}
+.tab {
+    margin: 10px;
+    width: 200px ;
+    border: 1px solid;
+    border-color: #666666;
+}
+.img {
+    border: 1px solid;
+    width: 180px ;
+    height: 180px ;
+    margin: 8px;
+    border-color: #666666;
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.title {
+    margin-left: 50px;
+}
+object {
+    background-color: white;
+    height: 100px;
+}
+.main-site {
+    background-color: #666666;
+    height: 100%;
+}
+.side-site {
+    height: 100% ;
+}
+.menue {
+    margin: 0px 40px 0px 20px ;
+    width: 70px;
+    font-size: 20px;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.all {
+    display: flex;
+    height: calc(100vh - 90px);
+}
+a {
+    text-decoration: none;
+}
+header {
+    height: 90px;
+    display: flex;
+}
+.body2 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#favorite {
+    text-decoration: underline;
+}
+.button {
+    width: 100px;
+}
+.searth {
+    margin: auto auto;
+    
+}
+.logo {
+    margin-right: calc(100vh - 500px);
+}
+.kairu {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
