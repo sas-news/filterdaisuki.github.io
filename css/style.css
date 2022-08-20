@@ -98,7 +98,7 @@ object {
 }
 .menue {
     margin: 0px 40px 0px 20px ;
-    width: 70px;
+    width: 93px;
     font-size: 20px;
 }
 .right {
@@ -138,4 +138,7 @@ header {
     position: absolute;
     bottom: 25px;
     right: 25px;
+}
+.down {
+    font-size: 13px;
 }
