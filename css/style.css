@@ -142,3 +142,6 @@ header {
 .down {
     font-size: 13px;
 }
+li {
+    margin: 15px 0 0 0;
+}
