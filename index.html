@@ -23,15 +23,17 @@
     <div class="searth"><input type="search"><button onclick="alert('そのぐらい自分で探そうな。');">検索</button></div>
   </header>
   <div class="all">
-  <div class="menue">
-    <p><a href="javascript:main('main');">ホーム</a></p>
-    <p><a href="javascript:main('video');">動画</a></p>
-    <p><a href="javascript:main('game');">ゲーム</a></p>
-    <p><a href="javascript:main('sns');">SNS</a></p>
-    <p><a href="javascript:main('comic');">漫画</a></p>
-    <p><a href="javascript:main('other');">その他</a></p>
-    <p class="down"><a href="javascript:main('policy');">利用規約<br>&<br>プライバシー<br>ポリシー</a></p>
-  </div>
+  <nav class="menue">
+    <ul>
+    <li><a href="javascript:main('main');">ホーム</a></li>
+    <li><a href="javascript:main('video');">動画</a></li>
+    <li><a href="javascript:main('game');">ゲーム</a></li>
+    <li><a href="javascript:main('sns');">SNS</a></li>
+    <li><a href="javascript:main('comic');">漫画</a></li>
+    <li><a href="javascript:main('other');">その他</a></li>
+    <li class="down"><a href="javascript:main('policy');">利用規約<br>&<br>プライバシー<br>ポリシー</a></li>
+    </ul>
+  </nav>
   <div class="right">
   <object data="news.txt" type="text/plain"></object>
   <iframe src="main_site/main.html" id="main" class="side-site"></iframe>
