@@ -128,11 +128,8 @@ header {
     width: 100px;
 }
 .searth {
-    margin: auto auto;
+    margin: auto 20px auto auto;
     
-}
-.logo {
-    margin-right: calc(100vh - 500px);
 }
 .kairu {
     position: absolute;
@@ -144,4 +141,5 @@ header {
 }
 li {
     margin: 15px 0 0 0;
+    list-style: none;
 }
