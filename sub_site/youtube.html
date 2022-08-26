@@ -31,10 +31,9 @@
   <script language="javascript" type="text/javascript">
     const showMessage = () => {
       const textbox = document.getElementById("input-message");
-      var url = textbox.value;
-      const id = url.split('v=')[1];
-      const output = "https://trans.hiragana.jp/ruby/https://dirpy.com/studio?url=https://m.youtube.com/watch?v=" + id + "";
-      location = "https://trans.hiragana.jp/ruby/https://dirpy.com/studio?url=https://m.youtube.com/watch?v=" + id + "";
+      const id = textbox.value;
+      const output = "https://trans.hiragana.jp/ruby/https://dirpy.com/studio?url=" + id + "";
+      location = "https://trans.hiragana.jp/ruby/https://dirpy.com/studio?url=" + id + "";
       document.getElementById("output-message").innerHTML = output;
     }
   </script>
