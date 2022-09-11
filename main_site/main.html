@@ -20,6 +20,9 @@
 <body>
   <h2 class="title">ホーム</h2>
   <div class="body2">
+    <p>俺らの夏は終わってない！</p>
+    <h3 id="output"></h3>
+    <br>
     <h4>ここでブックマークができます。新機能で一つしか追加できませんが、ご自身で最も使うサイトをブックマークしてみましょう。ページを読み込み直しても大丈夫なはずです。</h4>
     <p>
     サイト名
@@ -66,5 +69,16 @@
   </div>
 -->
   </ul>
+<script language="javascript" type="text/javascript">
+  var today = new Date();
+  var today2 = "" + today.getFullYear() + "/" + (today.getMonth()+1) + "/" + today.getDate() + "";
+  console.log(today2);
+  let day1 = new Date(today2);
+  let day2 = new Date("2022/12/23");
+  let termDay = (day2 - day1) / 86400000;
+  let output = ("冬休みまで"+ termDay +"日！！")
+  console.log(output);
+  document.getElementById("output").innerHTML = output;
+</script>
 </body>
 </html>
