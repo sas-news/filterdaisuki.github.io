@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172770628-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172770628-6');
+</script>
+  <meta charset="utf-8"/>
+  <title>フィルター回避ニコ動</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="icon.png">
+</head>
+<body>
+  <h2>PCのみ</h2>
+  <p><b>使い方</b><br>まず、下の検索欄で見たい動画を探しましょう。見つけたら、URLをコピーして下の入力欄に持っていきます。そうしたら生成を押しましょう。そうしたらブックマークを動かします。</p>
+  <p>あらかじめドラックしてお気に入りに入れておきます：<a href="javascript:(function(){if(/\.nicovideo\.jp\/api\/getflv\/(\w+)/.test(document.URL)){var%20t=(new%20Date).getTime(),xhr=new%20XMLHttpRequest;xhr.withCredentials=!0;xhr.open(&quot;GET&quot;,&quot;https://www.nicovideo.jp/api/watch/v3/&quot;+RegExp.$1+&quot;?_frontendId=6&amp;_frontendVersion=0&amp;actionTrackId=AAAAAAAAAA_&quot;+t+&quot;&amp;skips=harmful&amp;noSideEffect=false&amp;t=&quot;+t);xhr.onreadystatechange=function(){if(xhr.readyState===XMLHttpRequest.DONE){var%20i=function(n){xhr.open(&quot;POST&quot;,n.urls[0].url+&quot;?_format=json&quot;);xhr.setRequestHeader(&quot;Content-Type&quot;,&quot;application/json&quot;);xhr.onreadystatechange=function(){if(xhr.readyState===XMLHttpRequest.DONE){var%20t=JSON.parse(xhr.responseText);xhr.status>=200&amp;&amp;xhr.status<400?(document.body.innerHTML=&quot;<p>下のリンクにカーソルを合わせて右クリックから保存でどうぞ。<br>ダウンロード中はこのページを開いたままにしとかないとダウンロードに失敗します。<\/p><p><a%20href=\&quot;&quot;+t.data.session.content_uri+&quot;\&quot;%20target=\&quot;_blank\&quot;>&quot;+RegExp.$1+&quot;.mp4<\/a><\/p>&quot;,setInterval(function(){xhr.open(&quot;POST&quot;,n.urls[0].url+&quot;/&quot;+t.data.session.id+&quot;?_format=json&amp;_method=PUT&quot;);xhr.setRequestHeader(&quot;Content-Type&quot;,&quot;application/json&quot;);xhr.onreadystatechange=function(){};xhr.send(JSON.stringify(t.data))},Math.round(n.heartbeatLifetime/3))):document.body.innerHTML=&quot;<p>&quot;+t.meta.message+&quot;<\/p>&quot;}};xhr.send(JSON.stringify({session:{recipe_id:n.recipeId,content_id:n.contentId,content_type:&quot;movie&quot;,content_src_id_sets:[{content_src_ids:[{src_id_to_mux:{video_src_ids:n.videos,audio_src_ids:n.audios}}]}],timing_constraint:&quot;unlimited&quot;,keep_method:{heartbeat:{lifetime:n.heartbeatLifetime}},protocol:{name:&quot;http&quot;,parameters:{http_parameters:{parameters:{http_output_download_parameters:{use_well_known_port:&quot;yes&quot;,use_ssl:&quot;yes&quot;,transfer_preset:&quot;&quot;}}}}},content_uri:&quot;&quot;,session_operation_auth:{session_operation_auth_by_signature:{token:n.token,signature:n.signature}},content_auth:{auth_type:&quot;ht2&quot;,content_key_timeout:n.contentKeyTimeout,service_id:&quot;nicovideo&quot;,service_user_id:n.serviceUserId},client_info:{player_id:n.playerId},priority:n.priority}}))},n=JSON.parse(xhr.responseText);xhr.status>=200&amp;&amp;xhr.status<400?n.data.media.delivery?i(n.data.media.delivery.movie.session):document.body.innerHTML=&quot;<p>&quot;+n.data.okReason+&quot;<\/p>&quot;:(xhr.open(&quot;GET&quot;,&quot;https://www.nicovideo.jp/api/watch/v3_guest/&quot;+RegExp.$1+&quot;?_frontendId=6&amp;_frontendVersion=0&amp;actionTrackId=AAAAAAAAAA_&quot;+t+&quot;&amp;skips=harmful&amp;noSideEffect=false&amp;t=&quot;+t),xhr.onreadystatechange=function(){if(xhr.readyState===XMLHttpRequest.DONE){var%20n=JSON.parse(xhr.responseText);xhr.status>=200&amp;&amp;xhr.status<400?n.data.media.delivery?i(n.data.media.delivery.movie.session):document.body.innerHTML=&quot;<p>&quot;+n.data.okReason+&quot;<\/p>&quot;:document.body.innerHTML=&quot;<p>&quot;+n.meta.errorCode+&quot;<\/p>&quot;}},xhr.send())}};xhr.send()}})();" id="bookmarklet">ニコニコ視聴用ブックマーク</a>
+  </p>
+  <iframe src="https://gokulin.info/search/" width=700 height=850></iframe>
+  <form id="form1" action="#">
+    <input type="text" id="input-message">
+    <input type="button" onclick="showMessage()" value="生成!">
+  </form>
+  <p id="output-message"></p>
+  <p><b>利用規約</b><br>・他人に言わない<br>・先生にバレても隠すこと<br>・ニコニコをみすぎること<br>・このサイトは開発中であり、導入は自己責任でお願いします</p>
+  <h5>制作・75S</h5>
+  <h1 class="fi">フィルター回避ニコ動</h1>
+  <script language="javascript" type="text/javascript">
+    const showMessage = () => {
+      const textbox = document.getElementById("input-message");
+      var url = textbox.value;
+      const id = url.split('h/')[1];
+      const output = "https://flapi.nicovideo.jp/api/getflv/" + id + "";
+      location = "https://flapi.nicovideo.jp/api/getflv/" + id + "";
+      document.getElementById("output-message").innerHTML = output;
+    }
+  </script>
+</body>
+</html>
