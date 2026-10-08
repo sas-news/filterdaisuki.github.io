@@ -14,7 +14,7 @@
 <title>フィルター回避サイト</title>
 <link rel="stylesheet" href="../css/sanitize.css">
 <link rel="stylesheet" href="../css/style.css">
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="../favicon.ico">
 <meta name="theme-color" content="#0012ff">
 </head>
 <body>
@@ -53,11 +53,13 @@
         link.textContent = mydata;
       }
         mydata = localStorage.getItem('mydata');
-        var name = mydata.substr(0, mydata.indexOf(','));
-        var link = mydata.substr(mydata.indexOf(',') + 1);
-        let here = document.getElementById('favorite');
-        here.setAttribute('href', link);
-        here.textContent = name;
+        if (mydata && mydata.indexOf(',') > 0) {
+          var name = mydata.substring(0, mydata.indexOf(','));
+          var link = mydata.substring(mydata.indexOf(',') + 1);
+          let here = document.getElementById('favorite');
+          here.setAttribute('href', link);
+          here.textContent = name;
+        }
     </script>
     <p><br><br>ヒント・右下のカイル君をクリックするとお問い合わせができるよ<br>ホーム画面に載せるもの募集中。カイル君から応募してね。</p>
   </div>
@@ -79,7 +81,10 @@
   var today2 = "" + today.getFullYear() + "/" + (today.getMonth()+1) + "/" + today.getDate() + "";
   console.log(today2);
   let day1 = new Date(today2);
-  let day2 = new Date("2022/12/23");
+  let day2 = new Date(day1.getFullYear() + "/12/23");
+  if (day2 < day1) {
+    day2 = new Date((day1.getFullYear() + 1) + "/12/23");
+  }
   let termDay = (day2 - day1) / 86400000;
   let output = ("冬休みまで"+ termDay +"日！！")
   console.log(output);
